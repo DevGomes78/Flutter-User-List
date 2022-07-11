@@ -28,18 +28,18 @@ class _UserListPageState extends State<UserListPage> {
   Widget build(BuildContext context) {
     UserController provider = Provider.of<UserController>(context);
     return Scaffold(
-        body: provider.users.isNotEmpty
+        body: provider.lista.isNotEmpty
             ? ListView.builder(
-          itemCount: provider.users.length,
+          itemCount: provider.lista.length,
             itemBuilder: (context, index) {
-                var lista = provider.users[index];
+                var lista = provider.lista[index];
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: InkWell(
                     onTap: (){
                       Navigator.push(
                           context, MaterialPageRoute(
-                          builder: (context)=>DetailsPage(user: provider.users[index])));
+                          builder: (context)=>DetailsPage(user: provider.lista[index])));
                     },
                     child: Container(
                       height: 80,
@@ -50,16 +50,16 @@ class _UserListPageState extends State<UserListPage> {
                           children: [
                             CircleAvatar(
                               radius: 30,
-                              backgroundImage: NetworkImage(lista['image']),
+                              backgroundImage: NetworkImage(lista.image.toString()),
                             ),
                             const SizedBox(width: 20),
                             Text(
-                              lista['firstName'],
+                              lista.firstName.toString(),
                               style: const TextStyle(fontSize: 18),
                             ),
                             const SizedBox(width: 10),
                             Text(
-                              lista['lastName'],
+                              lista.lastName.toString(),
                               style: const TextStyle(fontSize: 18),
                             ),
                           ],

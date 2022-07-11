@@ -31,11 +31,11 @@ class UserModels {
 }
 
 class Users {
-  int? id;
+  num? id;
   String? firstName;
   String? lastName;
   String? maidenName;
-  int? age;
+   num? age;
   String? gender;
   String? email;
   String? phone;
@@ -44,8 +44,8 @@ class Users {
   String? birthDate;
   String? image;
   String? bloodGroup;
-  int? height;
-  double? weight;
+  num? height;
+  num? weight;
   String? eyeColor;
   Hair? hair;
   String? domain;

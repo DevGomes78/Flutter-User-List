@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_users/data/models/user_models.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:geocoding/geocoding.dart';
 
 class DetailsPage extends StatefulWidget {
  Users user;
@@ -16,7 +14,7 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('description '),
+        title: const Text('description '),
       ),
       body: Center(
         child: Column(
