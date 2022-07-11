@@ -19,6 +19,7 @@ class _DetailsPageState extends State<DetailsPage> {
       body: Center(
         child: Column(
          children: [
+           SizedBox(height: 30),
            Text(widget.user.age.toString()),
          ],
         ),
