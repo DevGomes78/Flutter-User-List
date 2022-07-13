@@ -20,7 +20,7 @@ class _DetailsPageState extends State<DetailsPage> {
         child: Column(
          children: [
            SizedBox(height: 30),
-           Text(widget.user.age.toString()),
+           Text(widget.user.email.toString()),
          ],
         ),
       ),
